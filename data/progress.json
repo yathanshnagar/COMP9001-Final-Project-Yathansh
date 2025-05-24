@@ -1,0 +1,32 @@
+{
+    "yathansh": {
+        "score": 67,
+        "total_guesses": 81,
+        "best_streak": 12
+    },
+    "shaonak": {
+        "score": 21,
+        "total_guesses": 54,
+        "best_streak": 3
+    },
+    "gautam": {
+        "score": 2,
+        "total_guesses": 3,
+        "best_streak": 2
+    },
+    "shoanak": {
+        "score": 4,
+        "total_guesses": 15,
+        "best_streak": 2
+    },
+    "prerna": {
+        "score": 3,
+        "total_guesses": 8,
+        "best_streak": 1
+    },
+    "p": {
+        "score": 3,
+        "total_guesses": 13,
+        "best_streak": 2
+    }
+}
