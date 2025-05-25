@@ -91,10 +91,10 @@ def create_main_window():
     root.title(TITLE)
     root.geometry(f"{WINDOW_WIDTH}x{WINDOW_HEIGHT}")
     root.resizable(False, False)
-    root.configure(bg="#2f0236")  # dark background for modern look
+    root.configure(bg="#5ecfe6")  # dark background for modern look
 
     # Hangman display frame (top-right)
-    hangman_frame = tk.Frame(root, bg="#2f0236")
+    hangman_frame = tk.Frame(root, bg="#5ecfe6")
     hangman_frame.place(relx=0.85, rely=0.05)  # Top-right corner
 
     # Title label
@@ -103,7 +103,7 @@ def create_main_window():
         text=TITLE,
         font=("Helvetica", 28, "bold"),
         fg="white",
-        bg="#2f0236",
+        bg="#5ecfe6",
         pady=30
     )
     title_label.grid(row=0, column=0, columnspan=3, sticky="n", padx=20)
@@ -171,7 +171,7 @@ def show_mode_selection(root):
         text="Choose Your Mode",
         font=("Helvetica", 24, "bold"),
         fg="white",
-        bg="#2f0236",
+        bg="#5ecfe6",
         pady=40
     )
     title_label.pack()
@@ -230,7 +230,7 @@ def show_boss_mode_options(root):
         text="Boss Mode Activated 💀 Choose Your Challenge:",
         font=("Helvetica", 20, "bold"),
         fg="#ff4c4c",
-        bg="#2f0236",
+        bg="#5ecfe6",
         pady=30
     )
     title_label.pack()
@@ -312,7 +312,7 @@ def start_game_round(root, mode="normal"):
 
     # Display question
     question_label = tk.Label(
-        root, text=question_text, font=("Helvetica", 18), fg="white", bg="#2f0236"
+        root, text=question_text, font=("Helvetica", 18), fg="white", bg="#5ecfe6"
     )
     question_label.pack(pady=20)
 
@@ -322,13 +322,13 @@ def start_game_round(root, mode="normal"):
         rb = tk.Radiobutton(
             root, text=opt, variable=selected, value=opt,
             font=("Helvetica", 14),
-            bg="#2f0236", fg="white", selectcolor="#333333",
-            activebackground="#2f0236", activeforeground="cyan"
+            bg="#5ecfe6", fg="white", selectcolor="#333333",
+            activebackground="#5ecfe6", activeforeground="cyan"
         )
         rb.pack(anchor="w", padx=200, pady=5)
 
     # Feedback label
-    feedback_label = tk.Label(root, text="", font=("Helvetica", 14), fg="white", bg="#2f0236")
+    feedback_label = tk.Label(root, text="", font=("Helvetica", 14), fg="white", bg="#5ecfe6")
     feedback_label.pack(pady=10)
 
     def submit_answer():
@@ -367,7 +367,7 @@ def start_game_round(root, mode="normal"):
             if hangman_label:
                 hangman_label.destroy()
 
-            hangman_label = tk.Label(root, image=hangman_img, bg="#2f0236")
+            hangman_label = tk.Label(root, image=hangman_img, bg="#5ecfe6")
             hangman_label.image = hangman_img
             # hangman_label.pack()
 
@@ -419,7 +419,7 @@ def start_game_round(root, mode="normal"):
                 # cover_label.pack(pady=10)
                 # Create a label for rotating image
                 cover_img = ImageTk.PhotoImage(original_img)
-                cover_label = tk.Label(root, image=cover_img, bg="#2f0236")
+                cover_label = tk.Label(root, image=cover_img, bg="#5ecfe6")
                 cover_label.image = cover_img
                 cover_label.pack(pady=10)
 
@@ -456,7 +456,7 @@ def start_game_round(root, mode="normal"):
                  f"Streak: {current_game_state.streak} | "
                  f"Accuracy: {current_game_state.get_accuracy():.1f}%",
             font=("Helvetica", 12),
-            fg="white", bg="#2f0236"
+            fg="white", bg="#5ecfe6"
         )
         stats_label.pack(pady=10)
 
